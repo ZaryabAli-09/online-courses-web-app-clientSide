@@ -4,9 +4,11 @@ import { IoSearch } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 
-const Navbar = () => {
+// import { Link as scrollLink } from "react-scroll";
+
+const Navbar = ({ bgColor }) => {
   return (
-    <nav className="flex justify-between items-center bg-primary-color py-5 ">
+    <nav className={`flex justify-between items-center bg-${bgColor} py-5 `}>
       <div className="flex justify-between w-full items-center px-5 lg:w-[50%] lg:justify-evenly lg:space-x-14 ">
         <Link to={"/"}>
           <img className="w-14 " src={logo} alt="logo" />
@@ -23,13 +25,13 @@ const Navbar = () => {
       <IoIosMenu className="lg:hidden text-4xl cursor-pointer mr-2" />
       <ul className="hidden  lg:flex lg:items-center lg:w-[50%] lg:space-x-4 lg:justify-end  lg:pr-10 ">
         <li>
-          <Link to={"#"}>Courses</Link>
+          <a href={"#courses"}>Courses</a>
         </li>
         <li>
-          <Link to={"#"}>About us </Link>
+          <a href={"#about"}>About us </a>
         </li>
         <li>
-          <Link to={"#"}>Contact Us</Link>
+          <a href={"#contact"}>Contact Us</a>
         </li>
         <li>
           <Link to={"#"}>Sign in</Link>
